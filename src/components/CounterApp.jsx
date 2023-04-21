@@ -12,13 +12,29 @@ const CounterApp = ({ value }) => {
         setCounter( counter + 1 )
     }
 
+    const handleRest = () => {
+        setCounter( counter -1 )
+    }
+
+    const handleStart = () => {
+        setCounter( value )
+    }
+
     return (
         <>
             <h1>Counter App</h1>
             <h2>{ counter }</h2>
-            <button onClick={ handleAdd }>
-                +1
-            </button>
+            <div className='btn-container'>
+                <button onClick={ handleAdd }>
+                    +1
+                </button>
+                <button onClick={ handleRest }>
+                    -1
+                </button>
+                <button onClick={ handleStart }>
+                    Reset
+                </button>
+            </div>
         </>
     )
 }
